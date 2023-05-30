@@ -3,22 +3,38 @@
     <head>
         <meta charset="utf-8"/>
         <title>¡ChronoBeasts!</title>
+        <script src="./js/chronobeast.js"></script>
     </head>
     <body>
         <h1>ChronoBeasts ⌛🌌⚛️</h1>
 
         <section id="chronobeast-choose">
             <h2>Choose your ChronoBeasts</h2>
-            ChronoBeasts
-            <button>Select</button>
+            
+             <label for="topotejon">TopoTejón</label>
+             <input type="radio" name="ChronoBeast" id="topotejon" />
+
+             <label for="carnerokanguro">CarneroKanguro</label>
+             <input type="radio" name="ChronoBeast" id="carnerokanguro" />
+
+             <label for="osoleon">OsoLeón</label>
+             <input type="radio" name="ChronoBeast" id="osoleon" />
+
+
+
+            <!--TigreConejo -> space/energy
+            LoboDragón -> energy/time
+            Capibara -> time/space-->
+            
+            <button id="button-slectChronoBeast">Select</button>
         </section>
 
         <section id="atk-choose">
             <h2>Choose your attack</h2>
             <p>
-                <button>Time ⌛</button>
-                <button>Space 🌌</button>
-                <button>Energy ⚛️</button>
+                <button id="button-time">Time ⌛</button>
+                <button id="button-space">Space 🌌</button>
+                <button id="butto-energy">Energy ⚛️</button>
             </p>
             <p>Your ChronoBeasts has <span>3</span> live points</p>
             <p>Foe's ChronoBeasts has <span>3</span> live points</p>
@@ -28,8 +44,8 @@
             <p>Your ChronoBeasts used Time, foe's ChronoBeasts used Energy, YOU WIN 🥳</p>
         </section>
 
-        <section id="Restart">
-            <button>Restart</button>
+        <section id="restart">
+            <button id="button-restart">Restart</button>
         </section>
 
 
