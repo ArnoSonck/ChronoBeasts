@@ -2,8 +2,6 @@ function startGame(){
     let buttonChronoBeastPlayer = document.getElementById('button-slectChronoBeast')
     buttonChronoBeastPlayer.addEventListener('click',playerSelection)
 
-
-    
 }
 
 function playerSelection(){
@@ -21,6 +19,24 @@ function playerSelection(){
     } else{
         alert('Select a ChronoBeast')
     }
+
+    foeSelection()
+}
+
+function foeSelection(){
+    let randomAttack = aleatorio(1,3)
+    let spamFoeChronoBeast = document.getElementById('foeChronoBeast')
+    if(randomAttack == 1){
+        spamFoeChronoBeast.innerHTML = "TopoTejon"
+    } else if(randomAttack == 2){
+        spamFoeChronoBeast.innerHTML = "CarneroKanguro"
+    } else {
+        spamFoeChronoBeast.innerHTML = "OsoLeón"
+    }
+}
+
+function aleatorio(min, max){
+    return Math.floor(Math.random()*(max-min+1)+min)
 }
 
 function selectChronoBeastPlayer(){
