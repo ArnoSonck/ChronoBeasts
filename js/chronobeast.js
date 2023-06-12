@@ -1,6 +1,8 @@
 let playerAttack
 let foeAttack
 let combatResult
+let playerLife = 3
+let foeLife = 3
 
 function startGame(){
     let buttonChronoBeastPlayer = document.getElementById('button-slectChronoBeast')
@@ -75,16 +77,27 @@ function randomFoeAttack(){
 }
 
 function combat(player, foe){
+    let spanPlayerLife =document.getElementById("playerLifeP")
+    let spanFoeLife =document.getElementById("foeLifeP")
+
     if(foe == player){
         combatResult = "- TIE 🤡"
     }else if(player == "TIME" && foe == "ENERGY"){
         combatResult = "- You won 🥳"
+        foeLife--
+        spanFoeLife.innerHTML=foeLife
     }else if(player == "SPACE" && foe == "TIME"){
         combatResult = "- You won 🥳"
+        foeLife--
+        spanFoeLife.innerHTML=foeLife
     }else if(player == "ENERGY" && foe == "SPACE"){
         combatResult = "- You won 🥳"
+        foeLife--
+        spanFoeLife.innerHTML=foeLife
     }else{
         combatResult = "- Foe won 😿"
+        playerLife--
+        spanPlayerLife.innerHTML=playerLife
     }
     messageCreation()
 }
