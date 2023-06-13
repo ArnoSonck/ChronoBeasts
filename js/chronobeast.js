@@ -108,6 +108,25 @@ function messageCreation(){
     parragraph.innerHTML = 'Your ChronoBeasts used ' + playerAttack + ', foe\'s ChronoBeasts used '+ foeAttack + combatResult
     
     battleHistory.appendChild(parragraph)
+
+    lifeCheck()
+}
+
+function finalMessageCreation(finalMessage){
+    let battleHistory = document.getElementById('battleHistory')
+    let parragraph = document.createElement('p')
+    parragraph.innerHTML = finalMessage
+    
+    battleHistory.appendChild(parragraph)
+
+}
+
+function lifeCheck(){
+    if (playerLife <= 0){
+        finalMessageCreation("Sorry, you lost")
+    } else if(foeLife <= 0){
+        finalMessageCreation("Congratulation, YOU WON")
+    }
 }
 
 function aleatorio(min, max){
