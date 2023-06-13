@@ -5,6 +5,9 @@ let playerLife = 3
 let foeLife = 3
 
 function startGame(){
+    let attackSection = document.getElementById("atk-choose")
+    attackSection.style.display="none"
+
     let buttonChronoBeastPlayer = document.getElementById('button-slectChronoBeast')
     buttonChronoBeastPlayer.addEventListener('click',playerSelection)
 
@@ -17,10 +20,15 @@ function startGame(){
     
     let buttonRestar =document.getElementById("button-restart")
     buttonRestar.addEventListener("click",restarGame)
-
+    buttonRestar.style.display="none"
 }
 
 function playerSelection(){
+    let attackSection = document.getElementById("atk-choose")
+    attackSection.style.display="block"
+    let chronoBeastSelectionSection = document.getElementById("chronobeast-choose")
+    chronoBeastSelectionSection.style.display="none"
+
     let topoTejonPlayer = document.getElementById('topotejon')
     let carneroKanguro = document.getElementById('carnerokanguro')
     let osoLeón = document.getElementById('osoleon')
@@ -134,6 +142,8 @@ function finalMessageCreation(finalMessage){
     let buttonEnergy = document.getElementById("button-energy")
     buttonEnergy.disabled = true
 
+    let buttonRestar =document.getElementById("button-restart")
+    buttonRestar.style.display="block"
 }
 
 function lifeCheck(){
