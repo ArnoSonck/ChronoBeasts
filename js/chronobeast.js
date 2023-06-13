@@ -14,6 +14,9 @@ function startGame(){
     buttonSpace.addEventListener("click",spaceAttack)
     let buttonEnergy = document.getElementById("button-energy")
     buttonEnergy.addEventListener("click",energyAttack)
+    
+    let buttonRestar =document.getElementById("button-restart")
+    buttonRestar.addEventListener("click",restarGame)
 
 }
 
@@ -61,6 +64,11 @@ function spaceAttack(){
 function energyAttack(){
     playerAttack = "ENERGY"
     randomFoeAttack()
+}
+
+function restarGame(){
+    location.reload()
+
 }
 
 function randomFoeAttack(){
@@ -118,6 +126,13 @@ function finalMessageCreation(finalMessage){
     parragraph.innerHTML = finalMessage
     
     battleHistory.appendChild(parragraph)
+
+    let buttonTime = document.getElementById("button-time")
+    buttonTime.disabled = true
+    let buttonSpace = document.getElementById("button-space")
+    buttonSpace.disabled = true
+    let buttonEnergy = document.getElementById("button-energy")
+    buttonEnergy.disabled = true
 
 }
 
